@@ -152,4 +152,4 @@ Without one of these in place, an attacker who finds the origin IP can bypass Cl
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
