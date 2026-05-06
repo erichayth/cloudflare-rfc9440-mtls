@@ -152,4 +152,4 @@ Without one of these in place, an attacker who finds the origin IP can bypass Cl
 
 ## License
 
-MIT (or your preferred OSS license — adjust before publishing).
+MIT
