@@ -1,0 +1,18 @@
+# Wrangler local state
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Build artifacts
+dist/
+build/
