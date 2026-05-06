@@ -1,0 +1,25 @@
+name = "rfc9440-mtls-forwarder"
+main = "worker.js"
+compatibility_date = "2026-05-01"
+
+# Bind this Worker to your mTLS-protected hostname(s) via a route.
+# Replace the placeholder zone + pattern before deploy.
+#
+# [[routes]]
+# pattern = "app.example.com/*"
+# zone_name = "example.com"
+
+# Observability: the Worker emits one structured JSON log line per request
+# with the cert decision (verified / revoked / failed / no-cert / too-large)
+# plus cert metadata (Subject DN, Issuer DN, serial, fingerprint, validity).
+# Cert bytes are NEVER logged. View via:
+#   - `wrangler tail` for live debugging
+#   - Workers Logs UI in dashboard for ad-hoc queries
+#   - Logpush to R2/S3/Splunk/etc. for retention + audit
+[observability]
+enabled = true
+
+# Optional: route logs to a Logpush job for long-term retention.
+# See https://developers.cloudflare.com/logs/get-started/api-configuration/
+# Configure the Logpush job separately via API or dashboard; the Worker's
+# console.log lines are picked up automatically once the job exists.
